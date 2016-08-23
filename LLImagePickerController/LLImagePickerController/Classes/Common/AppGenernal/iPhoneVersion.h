@@ -35,7 +35,6 @@
 
 // iOS8 以上
 #define iOS8Upwards ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-//#define iOS8Upwards ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
 
 // iOS7 以上
 #define iOS7Upwards ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)

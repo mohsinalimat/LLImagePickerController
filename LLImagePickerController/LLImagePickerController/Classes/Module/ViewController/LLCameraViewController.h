@@ -35,9 +35,9 @@ typedef void (^CameraBlock) (UIImage *image);
 
 @end
 
-/* * * * * * * * * * * * * * * * * * * * * * *
+/* * * * * * * * * * * * * * * * * * * *
         以下是内部视图, 不用理会
- * * * * * * * * * * * * * * * * * * * * * * */
+ * * * * * * * * * * * * * * * * * * * */
  
 @interface LLFlashlampView : UIView
 

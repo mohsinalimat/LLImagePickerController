@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+//#import "LLCameraViewController.h"
 #import "LLCameraViewController.h"
 
 @interface CameraViewController ()
@@ -33,9 +34,7 @@
 
 - (void)showCameraPage:(UIBarButtonItem *)sender {
     LLCameraViewController *cameraVC = [[LLCameraViewController alloc] init];
-    cameraVC.defaultFlashlampStyle = LLFlashlampStyleAuto;
-    cameraVC.saveImageToAlbum = NO;
-    [cameraVC getPhotoFromCameraWithBlock:^(UIImage *image) {
+    [cameraVC getResultFromCameraWithBlock:^(UIImage *image, NSDictionary *info) {
         _imageView.image = image;
     }];
     [self presentViewController:cameraVC animated:YES completion:nil];

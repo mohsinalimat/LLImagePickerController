@@ -40,18 +40,17 @@ typedef NS_ENUM(NSInteger, LLAuthorizationStatus) {
 /** 获取所有相册(iOS8及以下)
  * @brief result 的元素类型为 PHAssetCollection
  */
-- (void)enumerateGroupsAtSystemiOS8DownwardsWithFinishBlock:(void(^)(NSArray <ALAssetsGroup *>*result))finishBlock NS_DEPRECATED_IOS(4_0, 9_0, "Use the enumerateGroupsAtSystemiOS8UpwardsWithFinishBlock: instead");
+- (void)enumerateALAssetsGroupsWithResultHandler:(void(^)(NSArray <ALAssetsGroup *>*result))resultHandler NS_DEPRECATED_IOS(4_0, 9_0, "Use the enumeratePHAssetCollectionsWithResultHandler: instead");
 
 /** 获取所有相册(iOS8及以上)
  * @brief result 的元素类型为 PHAssetCollection
  */
-- (void)enumerateGroupsAtSystemiOS8UpwardsWithFinishBlock:(void(^)(NSArray <PHAssetCollection *>*result))finishBlock NS_AVAILABLE_IOS(9_0);
+- (void)enumeratePHAssetCollectionsWithResultHandler:(void(^)(NSArray <PHAssetCollection *>*result))resultHandler NS_AVAILABLE_IOS(8_0);
 
 /** 获取所有相册(兼容iOS8及iOS8)
- * @brief 如果iOS系统是9.0或以上, 则 result 的元素类型为 PHAssetCollection, 否则为 ALAssetsGroup
+ * @brief 如果iOS系统是8.0或以上, 则 result 的元素类型为 PHAssetCollection, 否则为 ALAssetsGroup
  */
 - (void)enumerateGroupsWithFinishBlock:(void(^)(NSArray *result))finishBlock;
-
 
 #pragma mark -
 #pragma mark - 获取某一相册下所有图片资源

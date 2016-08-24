@@ -65,7 +65,7 @@ static NSString *const reUse = @"reUse";
 - (void)loadingPhotos {
     WeakSelf(self)
     if (iOS8Upwards) {
-        [_imageHandler enumerateGroupsAtSystemiOS8UpwardsWithFinishBlock:^(NSArray<PHAssetCollection *> *result) {
+        [_imageHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
             weakSelf.assetCollections = [NSArray arrayWithArray:result];
             [weakSelf.tableView reloadData];
             if (weakSelf.pushToCollectionPage) {
@@ -77,7 +77,7 @@ static NSString *const reUse = @"reUse";
             }
         }];
     } else {
-        [_imageHandler enumerateGroupsAtSystemiOS8DownwardsWithFinishBlock:^(NSArray<ALAssetsGroup *> *result) {
+        [_imageHandler enumerateALAssetsGroupsWithResultHandler:^(NSArray<ALAssetsGroup *> *result) {
             weakSelf.assetGroups = [NSArray arrayWithArray:result];
             [weakSelf.tableView reloadData];
             if (weakSelf.pushToCollectionPage) {

@@ -134,13 +134,4 @@
     }
 }
 
-+ (void)animationFlipFromLeft:(UIView *)view duration:(NSTimeInterval)duration {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:duration];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:view cache:NO];
-    [UIView commitAnimations];
-}
-
-
 @end

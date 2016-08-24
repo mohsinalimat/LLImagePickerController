@@ -220,7 +220,7 @@
 #pragma mark -
 #pragma mark - deinit
 - (void)dealloc {
-//    NSLog(@"%@", self);
+    LLog(@"%@", self);
 }
 
 - (void)didReceiveMemoryWarning {

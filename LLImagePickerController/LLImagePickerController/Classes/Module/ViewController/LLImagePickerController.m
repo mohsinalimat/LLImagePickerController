@@ -47,7 +47,7 @@
 #pragma mark -
 #pragma mark - deinit method
 - (void)dealloc {
-    NSLog(@"%@", self);
+    LLog(@"%@", self);
     [[LLImageSelectHandler instance] removeAllAssets];
     [LLImageSelectHandler instance].needOriginal = NO;
 }

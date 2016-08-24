@@ -56,8 +56,7 @@ static CGFloat const kDefaultThumbnailWidth = 100;
 /** 获取所有相册(iOS8及以下)
  * @brief result 的元素类型为 PHAssetCollection
  */
-- (void)enumerateGroupsAtSystemiOS8DownwardsWithFinishBlock:(void(^)(NSArray <ALAssetsGroup *>*result))finishBlock {
-    // iOS 9.0 以下
+- (void)enumerateALAssetsGroupsWithResultHandler:(void(^)(NSArray <ALAssetsGroup *>*result))resultHandler {
     __block NSMutableArray *groups = [NSMutableArray array];
     [_assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         if (group.numberOfAssets > 0) {
@@ -65,7 +64,7 @@ static CGFloat const kDefaultThumbnailWidth = 100;
         } else {
             // 主线程回调
             dispatch_async(dispatch_get_main_queue(), ^{
-                finishBlock(groups);
+                Block_exe(resultHandler, groups);
             });
         }
     } failureBlock:^(NSError *error) {
@@ -76,7 +75,7 @@ static CGFloat const kDefaultThumbnailWidth = 100;
 /** 获取所有相册(iOS8及以上)
  * @brief result 的元素类型为 PHAssetCollection
  */
-- (void)enumerateGroupsAtSystemiOS8UpwardsWithFinishBlock:(void(^)(NSArray <PHAssetCollection *>*result))finishBlock {
+- (void)enumeratePHAssetCollectionsWithResultHandler:(void(^)(NSArray <PHAssetCollection *>*result))resultHandler {
     // 照片群组数组
     NSMutableArray *groups = [NSMutableArray array];
     
@@ -103,19 +102,19 @@ static CGFloat const kDefaultThumbnailWidth = 100;
     
     dispatch_sync(self.concurrentQueue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            finishBlock(groups);
+            Block_exe(resultHandler, groups);
         });
     });
 }
 
 /** 获取所有相册(兼容iOS8及iOS8)
- * @brief 如果iOS系统是9.0或以上, 则 result 的元素类型为 PHAssetCollection, 否则为 ALAssetsGroup
+ * @brief 如果iOS系统是8.0或以上, 则 result 的元素类型为 PHAssetCollection, 否则为 ALAssetsGroup
  */
 - (void)enumerateGroupsWithFinishBlock:(void(^)(NSArray *result))finishBlock {
     if (iOS8Upwards) {
-        [self enumerateGroupsAtSystemiOS8UpwardsWithFinishBlock:finishBlock];
+        [self enumeratePHAssetCollectionsWithResultHandler:finishBlock];
     } else {
-        [self enumerateGroupsAtSystemiOS8DownwardsWithFinishBlock:finishBlock];
+        [self enumerateALAssetsGroupsWithResultHandler:finishBlock];
     }
 }
 

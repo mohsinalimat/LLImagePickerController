@@ -59,11 +59,10 @@
 		DD7372001D6C25EF00BD1A47 /* flashlampOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7371FE1D6C25EF00BD1A47 /* flashlampOn@3x.png */; };
 		DD7372031D6C301A00BD1A47 /* turnCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7372011D6C301A00BD1A47 /* turnCamera@2x.png */; };
 		DD7372041D6C301A00BD1A47 /* turnCamera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7372021D6C301A00BD1A47 /* turnCamera@3x.png */; };
-		DD7372071D6C457D00BD1A47 /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7372061D6C457D00BD1A47 /* CoreAnimationEffect.m */; };
-		DD73720A1D6C500F00BD1A47 /* LLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7372091D6C500F00BD1A47 /* LLCameraViewController.m */; };
 		DD7372131D6C505C00BD1A47 /* PhotoRevealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD73720F1D6C505C00BD1A47 /* PhotoRevealCell.m */; };
 		DD7372141D6C505C00BD1A47 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7372111D6C505C00BD1A47 /* PhotosViewController.m */; };
 		DD7372171D6C50D100BD1A47 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7372161D6C50D100BD1A47 /* CameraViewController.m */; };
+		DD7404E61D6D50B20084AA26 /* LLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7404E51D6D50B20084AA26 /* LLCameraViewController.m */; };
 		DD79BC4C1D6AE5E3009FBBC6 /* LLBlackToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD79BC4B1D6AE5E3009FBBC6 /* LLBlackToolbar.m */; };
 /* End PBXBuildFile section */
 
@@ -164,16 +163,16 @@
 		DD7371FE1D6C25EF00BD1A47 /* flashlampOn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlampOn@3x.png"; sourceTree = "<group>"; };
 		DD7372011D6C301A00BD1A47 /* turnCamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turnCamera@2x.png"; sourceTree = "<group>"; };
 		DD7372021D6C301A00BD1A47 /* turnCamera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turnCamera@3x.png"; sourceTree = "<group>"; };
-		DD7372051D6C457D00BD1A47 /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
-		DD7372061D6C457D00BD1A47 /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
-		DD7372081D6C500F00BD1A47 /* LLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCameraViewController.h; sourceTree = "<group>"; };
-		DD7372091D6C500F00BD1A47 /* LLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCameraViewController.m; sourceTree = "<group>"; };
 		DD73720E1D6C505C00BD1A47 /* PhotoRevealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoRevealCell.h; sourceTree = "<group>"; };
 		DD73720F1D6C505C00BD1A47 /* PhotoRevealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoRevealCell.m; sourceTree = "<group>"; };
 		DD7372101D6C505C00BD1A47 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		DD7372111D6C505C00BD1A47 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		DD7372151D6C50D100BD1A47 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		DD7372161D6C50D100BD1A47 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		DD7404E41D6D50B20084AA26 /* LLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCameraViewController.h; sourceTree = "<group>"; };
+		DD7404E51D6D50B20084AA26 /* LLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCameraViewController.m; sourceTree = "<group>"; };
+		DD7404E71D6D62480084AA26 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DD7404E81D6D62480084AA26 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DD79BC4A1D6AE5E3009FBBC6 /* LLBlackToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlackToolbar.h; sourceTree = "<group>"; };
 		DD79BC4B1D6AE5E3009FBBC6 /* LLBlackToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBlackToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,8 +218,6 @@
 				DD266C861D63178F00476C1B /* LaunchScreen.storyboard */,
 				DD266C891D63178F00476C1B /* Info.plist */,
 				DD266C781D63178F00476C1B /* Supporting Files */,
-				DD7372051D6C457D00BD1A47 /* CoreAnimationEffect.h */,
-				DD7372061D6C457D00BD1A47 /* CoreAnimationEffect.m */,
 			);
 			path = LLImagePickerController;
 			sourceTree = "<group>";
@@ -337,8 +334,6 @@
 		DD266C9B1D6318EE00476C1B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD7372081D6C500F00BD1A47 /* LLCameraViewController.h */,
-				DD7372091D6C500F00BD1A47 /* LLCameraViewController.m */,
 				DD266CED1D63214100476C1B /* LLImagePickerController.h */,
 				DD266CEE1D63214100476C1B /* LLImagePickerController.m */,
 				DD266CF01D63224200476C1B /* LLImageGroupController.h */,
@@ -347,6 +342,8 @@
 				DD266CF41D63225E00476C1B /* LLImageCollectionController.m */,
 				DD11769D1D64726B00375622 /* LLImageBrowserController.h */,
 				DD11769E1D64726B00375622 /* LLImageBrowserController.m */,
+				DD7404E41D6D50B20084AA26 /* LLCameraViewController.h */,
+				DD7404E51D6D50B20084AA26 /* LLCameraViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -572,16 +569,15 @@
 				DD7372131D6C505C00BD1A47 /* PhotoRevealCell.m in Sources */,
 				DD266CE91D631C5000476C1B /* LLMessageDialog.m in Sources */,
 				DD266CF51D63225E00476C1B /* LLImageCollectionController.m in Sources */,
+				DD7404E61D6D50B20084AA26 /* LLCameraViewController.m in Sources */,
 				DD7372171D6C50D100BD1A47 /* CameraViewController.m in Sources */,
 				DD266CC51D63194300476C1B /* MASViewConstraint.m in Sources */,
 				DD266CFE1D6325C200476C1B /* LLImageCollectionCell.m in Sources */,
 				DD266CFB1D63235200476C1B /* LLImageGroupCell.m in Sources */,
 				DD266CC01D63194300476C1B /* MASCompositeConstraint.m in Sources */,
-				DD73720A1D6C500F00BD1A47 /* LLCameraViewController.m in Sources */,
 				DD1176A51D64730C00375622 /* LLBrowserImageView.m in Sources */,
 				DD266CC61D63194300476C1B /* NSArray+MASAdditions.m in Sources */,
 				DD1176A21D6472A600375622 /* LLBrowserScrollView.m in Sources */,
-				DD7372071D6C457D00BD1A47 /* CoreAnimationEffect.m in Sources */,
 				DD266D011D63261C00476C1B /* LLSelectButton.m in Sources */,
 				DD266C801D63178F00476C1B /* ViewController.m in Sources */,
 				DD266CE31D631BBC00476C1B /* UIImage+LLAdd.m in Sources */,
@@ -615,6 +611,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD266C821D63178F00476C1B /* Base */,
+				DD7404E71D6D62480084AA26 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -623,6 +620,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD266C871D63178F00476C1B /* Base */,
+				DD7404E81D6D62480084AA26 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

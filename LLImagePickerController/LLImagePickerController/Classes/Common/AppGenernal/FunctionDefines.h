@@ -14,9 +14,9 @@ __weak typeof(self) weakSelf = self;
 __strong typeof(weakSelf) strongSelf = weakSelf;
 
 #ifdef DEBUG
-#define NSLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#define LLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #else
-#define NSLog(format, ...)
+#define LLog(format, ...)
 #endif
 
 #ifndef Class

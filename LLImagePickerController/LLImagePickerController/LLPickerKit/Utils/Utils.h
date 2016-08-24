@@ -21,6 +21,4 @@
 
 + (void)loadingResultAssetsWithBlock:(void(^)(NSArray <UIImage *>*images))block;
 
-+ (void)animationFlipFromLeft:(UIView *)view duration:(NSTimeInterval)duration;
-
 @end

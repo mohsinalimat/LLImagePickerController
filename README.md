@@ -30,12 +30,8 @@ self.dataArray = [NSArray arrayWithArray:imageArray];
 2. 相机
 ```
     LLCameraViewController *cameraVC = [[LLCameraViewController alloc] init];
-// 闪光灯默认样式
-    cameraVC.defaultFlashlampStyle = LLFlashlampStyleAuto;
-// 拍照后是否自动保存到本地
-    cameraVC.saveImageToAlbum = NO;
-// 拍照回调
-    [cameraVC getPhotoFromCameraWithBlock:^(UIImage *image) {
+// 拍照获取相片回调
+    [cameraVC getResultFromCameraWithBlock:^(UIImage *image, NSDictionary *info) {
         _imageView.image = image;
     }];
     [self presentViewController:cameraVC animated:YES completion:nil];

@@ -12,29 +12,29 @@ navigationController.allowSelectReturnType = YES;
 // 最大选择数量
 navigationController.maxSelectedCount = 3;
 if (iOS8Upwards) {
-// iOS8及以上的系统回调方法
-[navigationController getSelectedPHAssetsWithBlock:^(NSArray<UIImage *> *imageArray, NSArray<PHAsset *> *assetsArray) {
-self.dataArray = [NSArray arrayWithArray:imageArray];
-           [self.collectionView reloadData];
-       }];
-    } else {
-// iOS8以下系统回调方法
-        [navigationController getSelectedALAssetsWithBlock:^(NSArray<UIImage *> *imageArray, NSArray<ALAsset *> *assetsArray) {
-            self.dataArray = [NSArray arrayWithArray:imageArray];
-            [self.collectionView reloadData];
-        }];
-    }
-    [self presentViewController:navigationController animated:YES completion:nil];
+    // iOS8及以上的系统回调方法
+    [navigationController getSelectedPHAssetsWithBlock:^(NSArray<UIImage *> *imageArray, NSArray<PHAsset *> *assetsArray) {
+        self.dataArray = [NSArray arrayWithArray:imageArray];
+        [self.collectionView reloadData];
+    }];
+} else {
+    // iOS8以下系统回调方法
+    [navigationController getSelectedALAssetsWithBlock:^(NSArray<UIImage *> *imageArray, NSArray<ALAsset *> *assetsArray) {
+        self.dataArray = [NSArray arrayWithArray:imageArray];
+        [self.collectionView reloadData];
+    }];
+}
+[self presentViewController:navigationController animated:YES completion:nil];
 ```
 
 2. 相机
 ```
-    LLCameraViewController *cameraVC = [[LLCameraViewController alloc] init];
+LLCameraViewController *cameraVC = [[LLCameraViewController alloc] init];
 // 拍照获取相片回调
-    [cameraVC getResultFromCameraWithBlock:^(UIImage *image, NSDictionary *info) {
-        _imageView.image = image;
-    }];
-    [self presentViewController:cameraVC animated:YES completion:nil];
+[cameraVC getResultFromCameraWithBlock:^(UIImage *image, NSDictionary *info) {
+    _imageView.image = image;
+}];
+[self presentViewController:cameraVC animated:YES completion:nil];
 ```
 
 相册选择Demo样式如下:
